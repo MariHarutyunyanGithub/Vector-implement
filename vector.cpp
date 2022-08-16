@@ -92,11 +92,14 @@ Vector& Vector::operator+(Vector& other)
     if (this->empty()) {
         return other;
     }
-    Vector* tmp = new Vector[m_size];
-    for (size_t i{}; i < m_size; ++i) {
-        tmp[i] = (*this)[i] + other[i];
+    int* tmp = new int[m_size];
+    for (size_t i{}; i < (m_size <= other.m_size)? m_size : other.m_size; ++i) {
+        tmp[i] = m_buf[i] + other.m_buf[i];
     }
-    return *tmp;
+    delete m_buf;
+    m_buf = tmp;
+    tmp = nullptr;
+    return *this;
 }
 
 void Vector::operator+=(Vector& oth)
