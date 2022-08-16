@@ -51,6 +51,7 @@ Vector::Vector(std::initializer_list<int> init)
 Vector::~Vector()
 {
     delete m_buf;
+    m_buf = nullptr;
 }
 
 Vector& Vector::operator=(const Vector& oth)
