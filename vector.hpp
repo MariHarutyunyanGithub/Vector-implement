@@ -1,3 +1,6 @@
+#ifndef VECTOR_HPP
+#define VECTOR_HPP
+
 #include <initializer_list>
 #include <fstream>
 
@@ -40,3 +43,5 @@ class Vector
             size_t m_cap{};
             int* m_buf{};
 };
+
+#endif//VECTOR.HPP
