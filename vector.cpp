@@ -1,6 +1,3 @@
-#ifndef VECTOR_HPP
-#define VECTOR_HPP
-
 #include "vector.hpp"
 #include <iostream>
 
@@ -271,6 +268,4 @@ void Vector::pop_back()
 	if(!this->empty()){
 		--m_size;
 	}
-}    
-
-#endif//VECTOR_HPP
+}
