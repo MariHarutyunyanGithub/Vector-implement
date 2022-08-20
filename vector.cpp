@@ -109,8 +109,8 @@ void Vector::operator+=(Vector& oth)
 	}
     size_t old = m_size;
     m_size += oth.m_size;
-    for (size_t i{old}; i < m_size; ++i){
-		tmp[i] = oth.m_buf[i];
+    for (size_t i{}; i < oth.m_size; ++i){
+		tmp[old + i] = oth.m_buf[i];
 	}
     delete[] m_buf;
 	m_buf = tmp;
