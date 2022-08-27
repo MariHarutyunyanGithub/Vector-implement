@@ -17,8 +17,8 @@ class Vector
         Vector& operator=(const Vector&);
         Vector& operator=(const Vector&&);
         int& operator[](size_t);
-        const int& Vector::operator[](size_t) const;
-        Vector& Vector::operator+(Vector&);
+        const int& operator[](size_t) const;
+        Vector& operator+(Vector&);
         void operator+=(Vector&);
         friend std::ostream& operator<<(std::ostream& cout, const Vector& vec)
         {
